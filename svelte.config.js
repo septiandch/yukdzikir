@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -15,6 +15,12 @@ const config = {
     alias: {
       $assets: 'src/assets',
       $data: 'src/data'
+    },
+    paths: {
+      base: '/yukdzikir' // Change this to match your repo name
+    },
+    prerender: {
+      entries: ['*'] // Pre-renders all pages
     }
   }
 };
