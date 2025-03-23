@@ -20,7 +20,12 @@ const config = {
       base: '/yukdzikir' // Change this to match your repo name
     },
     prerender: {
-      entries: ['*'] // Pre-renders all pages
+      entries: [
+        '*', // Automatically crawl known pages
+        '/dzikr/morning', // Manually define your slugs
+        '/dzikr/evening',
+        '/dzikr/after-prayer'
+      ]
     }
   }
 };
